@@ -16,11 +16,11 @@
 <form action="" on:submit={handleSubmit}>
 	<div>
 		<label for="title">Name</label>
-		<input type="text" name="title" id="title">
+		<input type="text" name="title" id="title" required>
 	</div>
 	<div>
-		<label for="amount">Betrag</label>
-		<input type="number" name="amount" id="amount">
+		<label for="amount">Betrag (aufgerundet)</label>
+		<input type="number" name="amount" id="amount" required>
 	</div>
 	<div>
 		<label for="category">Kategorie</label>

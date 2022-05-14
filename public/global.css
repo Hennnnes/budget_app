@@ -5,6 +5,7 @@ body {
 
 :root {
 	--primary-color: #436385;
+	--primary-color-light: #b2cfee;
 	--primary-color-dark: #1e3955;
 	--border-thickness: 2px;
 	--border-radius: 4px;

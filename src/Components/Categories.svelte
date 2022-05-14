@@ -12,7 +12,7 @@
 
 <ul>
 {#each $categories as category}
-	<li>
+	<li style="--filled: {expensesPerCategory(category)}%">
 	<strong>{category.title}:</strong> {expensesPerCategory(category)} / {category.budget}€
 	</li>
 {/each}
@@ -32,5 +32,17 @@
 		border-radius: var(--border-radius);
 		width: auto;
 		padding: 8px 16px;
+		position: relative;
+	}
+
+	li:before {
+		content: '';
+		background: var(--primary-color-light);
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		width: var(--filled);
+		z-index: -1;
 	}
 </style>
