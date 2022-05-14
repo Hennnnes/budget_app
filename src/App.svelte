@@ -1,11 +1,19 @@
 <script>
 	import Headline from "./Components/Headline.svelte";
+	import AddExpense from "./Components/AddExpense.svelte";
 	import Expenses from "./Components/Expenses.svelte";
+	import AddCategory from "./Components/AddCategory.svelte";
+	import Categories from "./Components/Categories.svelte";
 </script>
 
 <main>
 	<Headline level="h1">Budget App</Headline>
-	<Headline level="h2">Ausgaben</Headline>
+	<Headline>Ausgabe hinzufügen</Headline>
+
+	<AddExpense />
 	<Expenses />
-	<Headline level="h2">Kategorien</Headline>
+
+	<Headline>Kategorien</Headline>
+	<AddCategory />
+	<Categories />
 </main>
