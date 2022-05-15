@@ -35,6 +35,10 @@
 		position: relative;
 	}
 
+	li:not(:last-of-type) {
+		margin-right: 12px;
+	}
+
 	li:before {
 		content: '';
 		background: var(--primary-color-light);

@@ -1,51 +1,52 @@
+:root {
+	--background-color-primary: #b2cfee;
+	/* --primary-color: #436385; */
+	--primary-color: #1e3955;
+	/* --primary-color-light: #b2cfee; */
+	--border-thickness: 2px;
+	--border-radius: 20px;
+}
+
+html {
+	background-color: var(--background-color-primary)
+}
 body {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	font-variant-ligatures: common-ligatures;
 }
 
-:root {
-	--primary-color: #436385;
-	--primary-color-light: #b2cfee;
-	--primary-color-dark: #1e3955;
-	--border-thickness: 2px;
-	--border-radius: 4px;
-}
 
 label {
 	display: block;
-	margin-bottom: 4px;
+	margin-left: 10px;
 	font-size: 1rem;
 }
 
 input,
-select {
+select,
+button {
 	display: block;
+	background-color: #fff;
 	border: var(--border-thickness) solid var(--primary-color);
 	border-radius: var(--border-radius);
 	color: var(--primary-color);
 	font-size: 1rem;
-	padding: 4px 8px;
-}
-
-input:focus {
-	border-color: var(--primary-color);
+	padding: 8px 16px;
 }
 
 button {
-	background-color: transparent;
-	border: var(--border-thickness) solid var(--primary-color);
-	border-radius: var(--border-radius);
-	color: var(--primary-color);
 	cursor: pointer;
 	font-size: inherit;
 	letter-spacing: inherit;
 	line-height: inherit;
 	margin: 0;
-	padding: 4px 8px;
+	padding: 8px 16px;
+	transition: box-shadow 250ms;
 }
 
 button:hover,
 button:focus {
 	color: var(--primary-color-dark);
 	border-color: var(--primary-color-dark);
+	box-shadow: 2px 2px 5px rgba(20, 20, 20, 0.4);
 }

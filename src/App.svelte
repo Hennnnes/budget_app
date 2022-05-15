@@ -7,7 +7,7 @@
 </script>
 
 <main>
-	<Headline level="h1">Budget App</Headline>
+	<Headline level="h1">Budget</Headline>
 	<Headline>Ausgabe hinzufügen</Headline>
 
 	<AddExpense />

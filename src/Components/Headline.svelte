@@ -1,5 +1,5 @@
 <script>
-	export let level = 'h1';
+	export let level;
 </script>
 
 {#if level === 'h1'}
@@ -12,6 +12,6 @@
 
 <style>
 	h1 {
-		font-size: 2rem;
+		font-size: 4rem;
 	}
 </style>

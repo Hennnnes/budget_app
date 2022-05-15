@@ -27,6 +27,7 @@
 	form {
 		display: flex;
 		align-items: flex-end;
+		flex-wrap: wrap;
 	}
 
 	form div {
