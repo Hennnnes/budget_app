@@ -1,4 +1,7 @@
 <script>
+	import Button from "../Atoms/Button.svelte";
+	import Input from "../Atoms/Input.svelte";
+	import Select from "../Atoms/Select.svelte";
 	import { categories, expenses } from "../store.js";
 
 	const handleSubmit = event => {
@@ -15,23 +18,20 @@
 
 <form action="" on:submit={handleSubmit}>
 	<div>
-		<label for="title">Name</label>
-		<input type="text" name="title" id="title" required>
+		<Input label="Name" name="title" required />
 	</div>
 	<div>
-		<label for="amount">Betrag (aufgerundet)</label>
-		<input type="number" name="amount" id="amount" required>
+		<Input type="number" label="Betrag (aufgerundet)" name="amount" required />
 	</div>
 	<div>
-		<label for="category">Kategorie</label>
-		<select name="category" id="category">
+		<Select label="Kategorie" name="category">
 			<option value="undefined" selected>unkategorisiert</option>
 			{#each $categories as category}
 				<option value="{category.title}">{category.title}</option>
 			{/each}
-		</select>
+		</Select>
 	</div>
-	<button>Speichern</button>
+	<Button>Speichern</Button>
 </form>
 
 <style>

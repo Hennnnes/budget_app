@@ -1,5 +1,9 @@
 <script>
+	import Button from "../Atoms/Button.svelte";
+	import Input from "../Atoms/Input.svelte";
 	import { categories } from "../store.js";
+
+	export let hidden = false;
 
 	const handleSubmit = event => {
 		event.preventDefault();
@@ -11,20 +15,20 @@
 	}
 </script>
 
-<form action="" on:submit={handleSubmit}>
+<form action="" on:submit={handleSubmit} hidden={hidden}>
 	<div>
-		<label for="categorytitle">Name</label>
-		<input type="text" name="categorytitle" id="categorytitle">
+		<Input label="Name" name="categorytitle" />
 	</div>
 	<div>
-		<label for="budget">Budget</label>
-		<input type="number" name="budget" id="budget">
+		<Input type="number" label="Budget" name="budget" />
 	</div>
-	<button>Hinzufügen</button>
+	<Button>Hinzufügen</Button>
 </form>
 
 <style>
 	form {
+		width: 100%;
+		flex-grow: 1;
 		display: flex;
 		align-items: flex-end;
 		flex-wrap: wrap;
